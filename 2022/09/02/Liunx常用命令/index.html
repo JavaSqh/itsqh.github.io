@@ -16,22 +16,22 @@
   <meta name="author" content="itsqh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一、Java中创建线程主要有三种方式1、继承Thread类创建线程类 定义Thread类的子类，并重写该类的run方法，该run方法的方法体就代表了线程要完成的任务。因此把run()方法称为执行体。 创建Thread子类的实例，即创建了线程对象。 调用线程对象的start()方法来启动该线程。  示例代码为： 1234567891011121314151617package com.sqh.thr">
+    <meta name="description" content="一、登录与注销 sudo useradd lilei  &#x2F;&#x2F;添加用户 (不能被立即使用，需设置密码 sudo passwd lilei)     sudo adduser lilei  &#x2F;&#x2F;添加用户   login  &#x2F;&#x2F;登录或切换用户   logout &#x2F;&#x2F;注销用户（命令行）  exit(shell-退出控制台)   shutdown -h 10  &#x2F;&#x2F;10分钟后自动关机	shutdown -c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java中创建线程的方式">
-<meta property="og:url" content="https://javasqh.github.io/itsqh.github.io/2022/08/13/Java%E4%B8%AD%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:title" content="Liunx常用命令">
+<meta property="og:url" content="https://javasqh.github.io/itsqh.github.io/2022/09/02/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="itsqh">
-<meta property="og:description" content="一、Java中创建线程主要有三种方式1、继承Thread类创建线程类 定义Thread类的子类，并重写该类的run方法，该run方法的方法体就代表了线程要完成的任务。因此把run()方法称为执行体。 创建Thread子类的实例，即创建了线程对象。 调用线程对象的start()方法来启动该线程。  示例代码为： 1234567891011121314151617package com.sqh.thr">
+<meta property="og:description" content="一、登录与注销 sudo useradd lilei  &#x2F;&#x2F;添加用户 (不能被立即使用，需设置密码 sudo passwd lilei)     sudo adduser lilei  &#x2F;&#x2F;添加用户   login  &#x2F;&#x2F;登录或切换用户   logout &#x2F;&#x2F;注销用户（命令行）  exit(shell-退出控制台)   shutdown -h 10  &#x2F;&#x2F;10分钟后自动关机	shutdown -c">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-13T10:36:02.000Z">
-<meta property="article:modified_time" content="2022-09-02T10:08:32.432Z">
+<meta property="article:published_time" content="2022-09-02T08:58:37.000Z">
+<meta property="article:modified_time" content="2022-09-02T10:09:18.401Z">
 <meta property="article:author" content="itsqh">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Liunx">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Java中创建线程的方式 - itsqh</title>
+  <title>Liunx常用命令 - itsqh</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Java中创建线程的方式"></span>
+            <span id="subtitle" data-typed-text="Liunx常用命令"></span>
           
         </div>
 
@@ -224,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-13 18:36" pubdate>
-          2022年8月13日 晚上
+        <time datetime="2022-09-02 16:58" pubdate>
+          2022年9月2日 下午
         </time>
       </span>
     
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.6k 字
+          2k 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          22 分钟
+          18 分钟
         
       </span>
     
@@ -293,54 +293,413 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Java中创建线程的方式</h1>
+            <h1 style="display: none">Liunx常用命令</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="一、Java中创建线程主要有三种方式"><a href="#一、Java中创建线程主要有三种方式" class="headerlink" title="一、Java中创建线程主要有三种方式"></a>一、Java中创建线程主要有三种方式</h1><h3 id="1、继承Thread类创建线程类"><a href="#1、继承Thread类创建线程类" class="headerlink" title="1、继承Thread类创建线程类"></a>1、继承Thread类创建线程类</h3><ul>
-<li>定义Thread类的子类，并重写该类的run方法，该run方法的方法体就代表了线程要完成的任务。因此把run()方法称为执行体。</li>
-<li>创建Thread子类的实例，即创建了线程对象。</li>
-<li>调用线程对象的start()方法来启动该线程。</li>
-</ul>
-<p>示例代码为：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.sqh.thread;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyThread</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Thread</span> &#123;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;<br>            System.out.println(<span class="hljs-built_in">this</span>.getName() + <span class="hljs-string">&quot;  &quot;</span> + i);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyThread</span>().start();<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyThread</span>().start();<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<h3 id="2、通过Runnable接口创建线程类"><a href="#2、通过Runnable接口创建线程类" class="headerlink" title="2、通过Runnable接口创建线程类"></a>2、通过Runnable接口创建线程类</h3><ul>
-<li>定义Runnable接口的实现类，并重写该接口的run()方法，该run()方法的方法体同样是该线程的线程执行体。</li>
-<li>创建Runnable实现类的实例，并以此实例作为Thread的target来创建Thread对象，该Thread对象才是真正的线程对象。</li>
-<li>调用线程对象的start()方法来启动该线程。</li>
-</ul>
-<p>示例代码为：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.sqh.thread;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyRunnable</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Runnable</span>&#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;<br>            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;  &quot;</span> + i);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">MyRunnable</span> <span class="hljs-variable">myRunnable</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyRunnable</span>();<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(myRunnable).start();<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(myRunnable).start();<br><br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-<p>线程的执行流程很简单，当执行代码start()时，就会执行对象中重写的run()方法，该方法执行完成后，线程就消亡了。</p>
-<h3 id="3、通过Callable和Future创建线程"><a href="#3、通过Callable和Future创建线程" class="headerlink" title="3、通过Callable和Future创建线程"></a>3、通过Callable和Future创建线程</h3><p>（1）创建Callable接口的实现类，并实现call()方法，该call()方法将作为线程执行体，并且有返回值。</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs aspectj"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Callable</span> </span>&#123;<br>    <span class="hljs-function">V <span class="hljs-title">call</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>（2）创建Callable实现类的实例，使用FutureTask类来包装Callable对象，该FutureTask对象封装了该Callable对象的call()方法的返回值。（FutureTask是一个包装器，它通过接受Callable来创建，它同时实现了Future和Runnable接口。）</p>
-<p>（3）使用FutureTask对象作为Thread对象的target创建并启动新线程。</p>
-<p>（4）调用FutureTask对象的get()方法来获得子线程执行结束后的返回值。</p>
-<p>实例代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.sqh.thread;<br><br><span class="hljs-keyword">import</span> java.util.concurrent.Callable;<br><span class="hljs-keyword">import</span> java.util.concurrent.FutureTask;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyCallable</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Callable</span> &#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> Object <span class="hljs-title function_">call</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>        <span class="hljs-keyword">return</span> Thread.currentThread().getName();<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>        <span class="hljs-type">MyCallable</span> <span class="hljs-variable">myCallable</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyCallable</span>();<br>        FutureTask&lt;String&gt; ft = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FutureTask</span>&lt;&gt;(myCallable);<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(ft).start();<br>        <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> ft.get();<br>        System.out.println(<span class="hljs-string">&quot;子线程的返回值：&quot;</span> + str);<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-<h2 id="二、创建线程的三种方式的对比"><a href="#二、创建线程的三种方式的对比" class="headerlink" title="二、创建线程的三种方式的对比"></a>二、创建线程的三种方式的对比</h2><h3 id="1、采用实现Runnable、Callable接口的方式创建多线程时"><a href="#1、采用实现Runnable、Callable接口的方式创建多线程时" class="headerlink" title="1、采用实现Runnable、Callable接口的方式创建多线程时"></a>1、采用实现Runnable、Callable接口的方式创建多线程时</h3><p><strong>优势是：</strong></p>
-<p>线程类只是实现了Runnable接口或Callable接口，还可以继承其他类。</p>
-<p>在这种方式下，多个线程可以共享同一个target对象，所以非常适合多个相同线程来处理同一份资源的情况，从而可以将CPU、代码和数据分开，形成清晰的模型，较好地体现了面向对象的思想。</p>
-<p><strong>劣势是：</strong></p>
-<p>编程稍微复杂，如果要访问当前线程，则必须使用Thread.currentThread()方法。</p>
-<h3 id="2、使用继承Thread类的方式创建多线程时"><a href="#2、使用继承Thread类的方式创建多线程时" class="headerlink" title="2、使用继承Thread类的方式创建多线程时"></a>2、使用继承Thread类的方式创建多线程时</h3><p><strong>优势是：</strong></p>
-<p>编写简单，如果需要访问当前线程，则无需使用Thread.currentThread()方法，直接使用this即可获得当前线程。</p>
-<p><strong>劣势是：</strong></p>
-<p>线程类已经继承了Thread类，所以不能再继承其他父类。</p>
-<h3 id="3、Runnable和Callable的区别"><a href="#3、Runnable和Callable的区别" class="headerlink" title="3、Runnable和Callable的区别"></a>3、Runnable和Callable的区别</h3><p>(1) Callable规定（重写）的方法是call()，Runnable规定（重写）的方法是run()。</p>
-<p>(2) Callable的任务执行后可返回值，而Runnable的任务是不能返回值的。</p>
-<p>(3) call方法可以抛出异常，run方法不可以。</p>
-<p>(4) 运行Callable任务可以拿到一个Future对象，表示异步计算的结果。它提供了检查计算是否完成的方法，以等待计算的完成，并检索计算的结果。通过Future对象可以了解任务执行情况，可取消任务的执行，还可获取执行结果。</p>
-<blockquote>
-<h5 id="参考资料：https-segmentfault-com-a-1190000022878543"><a href="#参考资料：https-segmentfault-com-a-1190000022878543" class="headerlink" title="参考资料：https://segmentfault.com/a/1190000022878543"></a>参考资料：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000022878543">https://segmentfault.com/a/1190000022878543</a></h5></blockquote>
+                <h2 id="一、登录与注销"><a href="#一、登录与注销" class="headerlink" title="一、登录与注销"></a>一、登录与注销</h2><ol>
+<li><pre><code class="hljs">sudo useradd lilei  //添加用户 (不能被立即使用，需设置密码 sudo passwd lilei)  
+</code></pre>
+<ol start="2">
+<li><pre><code class="hljs">sudo adduser lilei  //添加用户
+</code></pre>
+<ol start="3">
+<li><pre><code class="hljs">login  //登录或切换用户
+</code></pre>
+<ol start="4">
+<li><pre><code class="hljs">logout //注销用户（命令行）  exit(shell-退出控制台)
+</code></pre>
+<ol start="5">
+<li><pre><code class="hljs">shutdown -h 10  //10分钟后自动关机	shutdown -c  //取消
+</code></pre>
+<ol start="6">
+<li><pre><code class="hljs">halt(root用户)  //关闭所有进程后自动关机
+</code></pre>
+<ol start="7">
+<li><pre><code class="hljs">poweroff //同上
+</code></pre>
+<ol start="8">
+<li><pre><code class="hljs">shutdown -r 10 //十分钟后自动重启
+</code></pre>
+<ol start="9">
+<li><pre><code class="hljs">init 6  //重启 （0-停机，1-单用户，2-多用户，3-完全多用户，4-图形化，5-安全模式，6-重启）
+</code></pre>
+<ol start="10">
+<li><pre><code class="hljs">reboot  //重启
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="二、目录与文件"><a href="#二、目录与文件" class="headerlink" title="二、目录与文件"></a>二、目录与文件</h2><ol>
+<li><pre><code class="hljs">pwd   //显示当前工作目录
+</code></pre>
+<ol start="2">
+<li><pre><code class="hljs">mkdir mydir  //创建工作目录
+</code></pre>
+<ol start="3">
+<li><pre><code class="hljs">cd mydir  //更改工作目录
+</code></pre>
+<ol start="4">
+<li><pre><code class="hljs">rmdir mydir //删除工作目录
+</code></pre>
+<ol start="5">
+<li><pre><code class="hljs">touch myfile  //创建文件
+</code></pre>
+<ol start="6">
+<li><pre><code class="hljs">mv myfile mydir  //移动目录或文件
+</code></pre>
+<ol start="7">
+<li><pre><code class="hljs">cp myfile myfir  //复制目录或文件
+</code></pre>
+<ol start="8">
+<li><pre><code class="hljs">rm -rf mydir  //删除目录或文件
+</code></pre>
+<ol start="9">
+<li><pre><code class="hljs">ls -l myfile  //查看文件最后被编辑时间
+</code></pre>
+<ol start="10">
+<li><pre><code class="hljs">ls -lu myfile //查看文件最后被访问时间
+</code></pre>
+<ol start="11">
+<li><pre><code class="hljs">touch -at 01011212 myfile  //修改文件最后被访问时间
+</code></pre>
+<ol start="12">
+<li><pre><code class="hljs">ls //列出所有文件和目录
+</code></pre>
+<ol start="13">
+<li><pre><code class="hljs">ls -a //查看所有文件
+</code></pre>
+<ol start="14">
+<li><pre><code class="hljs">ls -i //显示文件索引节点号
+</code></pre>
+<ol start="15">
+<li><pre><code class="hljs">ls -l //详细显示
+</code></pre>
+<ol start="16">
+<li><pre><code class="hljs">ls -m //以逗号分隔
+</code></pre>
+<ol start="17">
+<li><pre><code class="hljs">sudo apt-get install tree 
+</code></pre>
+<ol start="18">
+<li><pre><code class="hljs">tree -l//以树状图列出目录内容
+</code></pre>
+<ol start="19">
+<li><pre><code class="hljs">tree -a //所有
+</code></pre>
+<ol start="20">
+<li><pre><code class="hljs">tree -i //不以阶梯状
+</code></pre>
+<ol start="21">
+<li><pre><code class="hljs">tree -s  //列出文件或目录大小
+</code></pre>
+<ol start="22">
+<li><pre><code class="hljs">tree -t  //按更改时间
+</code></pre>
+<ol start="23">
+<li><pre><code class="hljs">file -b myfile  //显示目录或文件的详细信息
+</code></pre>
+<ol start="24">
+<li><pre><code class="hljs">stat myfile  //同上
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="三、文件内容显示"><a href="#三、文件内容显示" class="headerlink" title="三、文件内容显示"></a>三、文件内容显示</h2><ol>
+<li><pre><code class="hljs">cat &gt; myfile  //创建文件并编辑内容（ctrl+D结束编辑）
+</code></pre>
+<ol start="2">
+<li><pre><code class="hljs">cat -n myfile  //查看文件
+</code></pre>
+<ol start="3">
+<li><pre><code class="hljs">chmod [u/g/o/a][+/-/=][r/w/x] myfile  //更改文件权限
+</code></pre>
+u-user,g-group,o-others,a-all  .   +-添加,–删除,&#x3D;-重置   .<br>r-read读（4），w-write写（2），x-execute执行（1）<ol start="4">
+<li><pre><code class="hljs">more myfile  //分页往后显示文件（Space空格）
+</code></pre>
+<ol start="5">
+<li><pre><code class="hljs">less myfile  //分页自由显示文件（Page Down / Page Up）
+</code></pre>
+<ol start="6">
+<li><pre><code class="hljs">head (-10) myfile  //指定显示文件前若干行（默认前10）
+</code></pre>
+<ol start="7">
+<li><pre><code class="hljs">tail (-10) myfile  //指定显示文件后若干行（默认后10）
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="四、文件内容处理"><a href="#四、文件内容处理" class="headerlink" title="四、文件内容处理"></a>四、文件内容处理</h2><ol>
+<li><pre><code class="hljs">sort myfile  //对文件内容进行排序
+</code></pre>
+<ol start="2">
+<li><pre><code class="hljs">sort -r myfile  //逆序
+</code></pre>
+<ol start="3">
+<li><pre><code class="hljs">uniq myfile  //检查文件中的重复内容
+</code></pre>
+<ol start="4">
+<li><pre><code class="hljs">grep （-c）‘a’ myfile  //在文件中查找指定内容 (显示行号)
+</code></pre>
+<ol start="5">
+<li><pre><code class="hljs">diff myfile01 myfile02  //对不同文件进行比较
+</code></pre>
+<ol start="6">
+<li><pre><code class="hljs">diff3 myfile01 myfile02 myfile03  //三个文件
+</code></pre>
+<ol start="7">
+<li><pre><code class="hljs">sdiff myfile01 myfile02  //合并
+</code></pre>
+<ol start="8">
+<li><pre><code class="hljs">cmp myfile01 myfile02  //通过字节对不同文件进行比较
+</code></pre>
+<ol start="9">
+<li><pre><code class="hljs">comm myfile01 myfile02  //对有序文件进行比较
+</code></pre>
+<ol start="10">
+<li><pre><code class="hljs">cut -b(-c)(-d) 2(3) myfile  //对文件内容进行剪切
+</code></pre>
+<ol start="11">
+<li><pre><code class="hljs">paste myfile02 myfile01 //对文件内容进行粘贴 02-）01
+</code></pre>
+<ol start="12">
+<li><pre><code class="hljs">wc （-参数） myfile  //对文件内容进行统计 （c-字符数,w-单词数,l-行数）
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="五、压缩"><a href="#五、压缩" class="headerlink" title="五、压缩"></a>五、压缩</h2><ol>
+<li><pre><code class="hljs">zip myfile.zip myfile  //压缩
+</code></pre>
+<ol start="2">
+<li><pre><code class="hljs">zip -d myfile.zip myfile  //添加
+</code></pre>
+<ol start="3">
+<li><pre><code class="hljs">zip -m myfile.zip myfile  //删除
+</code></pre>
+<ol start="4">
+<li><pre><code class="hljs">unzip -o myfile.zip  //解压（覆盖）
+</code></pre>
+<ol start="5">
+<li><pre><code class="hljs">unzip -n myfile.zip  //解压（不覆盖）
+</code></pre>
+<ol start="6">
+<li><pre><code class="hljs">zipinfo myfile.zip  //列出压缩文件信息
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>tar -xvf  myfile.tar.gz&#x2F;&#x2F;解压</p>
+</li>
+</ol>
+<h2 id="六、获取帮助"><a href="#六、获取帮助" class="headerlink" title="六、获取帮助"></a>六、获取帮助</h2><ol>
+<li><pre><code class="hljs">man ls  //获取帮助
+</code></pre>
+<ol start="2">
+<li><pre><code class="hljs">man -k ls  //不清楚完整名字
+</code></pre>
+<ol start="3">
+<li><pre><code class="hljs">whatis ls  //获取帮助
+</code></pre>
+<ol start="4">
+<li><pre><code class="hljs">help cd  / cd –help  //获取帮助 -d(简短描述) -s(用法简介)
+</code></pre>
+<ol start="5">
+<li><pre><code class="hljs">info who  //获取帮助
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="七、其他命令"><a href="#七、其他命令" class="headerlink" title="七、其他命令"></a>七、其他命令</h2><ol>
+<li><pre><code class="hljs">clear  //清楚屏幕信息
+</code></pre>
+<ol start="2">
+<li><pre><code class="hljs">echo xx  //显示文本  x=0  echo $x . echo -e \$x . echo $(pwd)
+</code></pre>
+<ol start="3">
+<li><pre><code class="hljs">date  //显示日期和时间（+%y 年  +%m 月  +%d日）
+</code></pre>
+<ol start="4">
+<li><pre><code class="hljs">cal  //显示当前日期  cal -y
+</code></pre>
+<ol start="5">
+<li><pre><code class="hljs">ps  //查看当前进程  -A(所有)  U  lilei (用户lilei)
+</code></pre>
+<ol start="6">
+<li><pre><code class="hljs">kill -9 2315  //终止某一进程  
+</code></pre>
+<ol start="7">
+<li><pre><code class="hljs">ps -ef | grep Jincheng
+</code></pre>
+<ol start="8">
+<li><pre><code class="hljs">pkill Jincheng
+</code></pre>
+<ol start="9">
+<li><pre><code class="hljs">killall Jincheng
+</code></pre>
+<ol start="10">
+<li><pre><code class="hljs">last  //显示最近登录系统的用户信息-6列
+</code></pre>
+<ol start="11">
+<li><pre><code class="hljs">history （10） //显示历史指令-默认1000行
+</code></pre>
+<ol start="12">
+<li><pre><code class="hljs">sudo adduser lilei sudo  //给普通用户赋予root权限
+</code></pre>
+<ol start="13">
+<li><pre><code class="hljs">sudo usermod -G sudo lilei  //同上
+</code></pre>
+<ol start="14">
+<li><pre><code class="hljs">alias l=’ls’  //定义命令别名
+</code></pre>
+<ol start="15">
+<li><pre><code class="hljs">unalias l  //删除别名
+</code></pre>
+<ol start="16">
+<li><pre><code class="hljs">alias  //列出别名
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 
                 
               </div>
@@ -353,7 +712,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/itsqh.github.io/tags/Java/">#Java</a>
+        <a href="/itsqh.github.io/tags/Liunx/">#Liunx</a>
       
     </div>
   
@@ -365,8 +724,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Java中创建线程的方式</div>
-      <div>https://javasqh.github.io/itsqh.github.io/2022/08/13/Java中创建线程的方式/</div>
+      <div>Liunx常用命令</div>
+      <div>https://javasqh.github.io/itsqh.github.io/2022/09/02/Liunx常用命令/</div>
     </div>
     <div class="license-meta">
       
@@ -378,7 +737,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年8月13日</div>
+          <div>2022年9月2日</div>
         </div>
       
       
@@ -408,15 +767,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/itsqh.github.io/2022/08/29/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Hexo常用命令">
+                      <a href="/itsqh.github.io/2022/09/02/CentOS7%E7%9A%84%E5%AE%89%E8%A3%85/" title="Centos7的安装">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hexo常用命令</span>
+                        <span class="hidden-mobile">Centos7的安装</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/itsqh.github.io/2022/09/02/Docker%E4%B8%AD%E9%95%9C%E5%83%8F%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" title="Docker中镜像相关操作">
+                        <span class="hidden-mobile">Docker中镜像相关操作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
