@@ -16,17 +16,17 @@
   <meta name="author" content="itsqh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一、登录与注销 sudo useradd lilei  &#x2F;&#x2F;添加用户 (不能被立即使用，需设置密码 sudo passwd lilei)     sudo adduser lilei  &#x2F;&#x2F;添加用户   login  &#x2F;&#x2F;登录或切换用户   logout &#x2F;&#x2F;注销用户（命令行）  exit(shell-退出控制台)   shutdown -h 10  &#x2F;&#x2F;10分钟后自动关机	shutdown -c">
+    <meta name="description" content="一、登录与注销123456789101)	sudo useradd lilei  &#x2F;&#x2F;添加用户 (不能被立即使用，需设置密码 sudo passwd lilei)  2)	sudo adduser lilei  &#x2F;&#x2F;添加用户3)	login  &#x2F;&#x2F;登录或切换用户4)	logout &#x2F;&#x2F;注销用户（命令行）  exit(shell-退出控制台)5)	shutdown -h 10  &#x2F;&#x2F;10分钟后自动关">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Liunx常用命令">
 <meta property="og:url" content="https://javasqh.github.io/itsqh.github.io/2022/09/02/Liunx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="itsqh">
-<meta property="og:description" content="一、登录与注销 sudo useradd lilei  &#x2F;&#x2F;添加用户 (不能被立即使用，需设置密码 sudo passwd lilei)     sudo adduser lilei  &#x2F;&#x2F;添加用户   login  &#x2F;&#x2F;登录或切换用户   logout &#x2F;&#x2F;注销用户（命令行）  exit(shell-退出控制台)   shutdown -h 10  &#x2F;&#x2F;10分钟后自动关机	shutdown -c">
+<meta property="og:description" content="一、登录与注销123456789101)	sudo useradd lilei  &#x2F;&#x2F;添加用户 (不能被立即使用，需设置密码 sudo passwd lilei)  2)	sudo adduser lilei  &#x2F;&#x2F;添加用户3)	login  &#x2F;&#x2F;登录或切换用户4)	logout &#x2F;&#x2F;注销用户（命令行）  exit(shell-退出控制台)5)	shutdown -h 10  &#x2F;&#x2F;10分钟后自动关">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-02T08:58:37.000Z">
-<meta property="article:modified_time" content="2022-09-02T10:09:18.401Z">
+<meta property="article:modified_time" content="2022-09-02T10:16:48.605Z">
 <meta property="article:author" content="itsqh">
-<meta property="article:tag" content="Liunx">
+<meta property="article:tag" content="Liunx;aaa">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.3k 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          18 分钟
+          20 分钟
         
       </span>
     
@@ -298,408 +298,32 @@
             
               <div class="markdown-body">
                 
-                <h2 id="一、登录与注销"><a href="#一、登录与注销" class="headerlink" title="一、登录与注销"></a>一、登录与注销</h2><ol>
-<li><pre><code class="hljs">sudo useradd lilei  //添加用户 (不能被立即使用，需设置密码 sudo passwd lilei)  
-</code></pre>
-<ol start="2">
-<li><pre><code class="hljs">sudo adduser lilei  //添加用户
-</code></pre>
-<ol start="3">
-<li><pre><code class="hljs">login  //登录或切换用户
-</code></pre>
-<ol start="4">
-<li><pre><code class="hljs">logout //注销用户（命令行）  exit(shell-退出控制台)
-</code></pre>
-<ol start="5">
-<li><pre><code class="hljs">shutdown -h 10  //10分钟后自动关机	shutdown -c  //取消
-</code></pre>
-<ol start="6">
-<li><pre><code class="hljs">halt(root用户)  //关闭所有进程后自动关机
-</code></pre>
-<ol start="7">
-<li><pre><code class="hljs">poweroff //同上
-</code></pre>
-<ol start="8">
-<li><pre><code class="hljs">shutdown -r 10 //十分钟后自动重启
-</code></pre>
-<ol start="9">
-<li><pre><code class="hljs">init 6  //重启 （0-停机，1-单用户，2-多用户，3-完全多用户，4-图形化，5-安全模式，6-重启）
-</code></pre>
-<ol start="10">
-<li><pre><code class="hljs">reboot  //重启
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="二、目录与文件"><a href="#二、目录与文件" class="headerlink" title="二、目录与文件"></a>二、目录与文件</h2><ol>
-<li><pre><code class="hljs">pwd   //显示当前工作目录
-</code></pre>
-<ol start="2">
-<li><pre><code class="hljs">mkdir mydir  //创建工作目录
-</code></pre>
-<ol start="3">
-<li><pre><code class="hljs">cd mydir  //更改工作目录
-</code></pre>
-<ol start="4">
-<li><pre><code class="hljs">rmdir mydir //删除工作目录
-</code></pre>
-<ol start="5">
-<li><pre><code class="hljs">touch myfile  //创建文件
-</code></pre>
-<ol start="6">
-<li><pre><code class="hljs">mv myfile mydir  //移动目录或文件
-</code></pre>
-<ol start="7">
-<li><pre><code class="hljs">cp myfile myfir  //复制目录或文件
-</code></pre>
-<ol start="8">
-<li><pre><code class="hljs">rm -rf mydir  //删除目录或文件
-</code></pre>
-<ol start="9">
-<li><pre><code class="hljs">ls -l myfile  //查看文件最后被编辑时间
-</code></pre>
-<ol start="10">
-<li><pre><code class="hljs">ls -lu myfile //查看文件最后被访问时间
-</code></pre>
-<ol start="11">
-<li><pre><code class="hljs">touch -at 01011212 myfile  //修改文件最后被访问时间
-</code></pre>
-<ol start="12">
-<li><pre><code class="hljs">ls //列出所有文件和目录
-</code></pre>
-<ol start="13">
-<li><pre><code class="hljs">ls -a //查看所有文件
-</code></pre>
-<ol start="14">
-<li><pre><code class="hljs">ls -i //显示文件索引节点号
-</code></pre>
-<ol start="15">
-<li><pre><code class="hljs">ls -l //详细显示
-</code></pre>
-<ol start="16">
-<li><pre><code class="hljs">ls -m //以逗号分隔
-</code></pre>
-<ol start="17">
-<li><pre><code class="hljs">sudo apt-get install tree 
-</code></pre>
-<ol start="18">
-<li><pre><code class="hljs">tree -l//以树状图列出目录内容
-</code></pre>
-<ol start="19">
-<li><pre><code class="hljs">tree -a //所有
-</code></pre>
-<ol start="20">
-<li><pre><code class="hljs">tree -i //不以阶梯状
-</code></pre>
-<ol start="21">
-<li><pre><code class="hljs">tree -s  //列出文件或目录大小
-</code></pre>
-<ol start="22">
-<li><pre><code class="hljs">tree -t  //按更改时间
-</code></pre>
-<ol start="23">
-<li><pre><code class="hljs">file -b myfile  //显示目录或文件的详细信息
-</code></pre>
-<ol start="24">
-<li><pre><code class="hljs">stat myfile  //同上
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="三、文件内容显示"><a href="#三、文件内容显示" class="headerlink" title="三、文件内容显示"></a>三、文件内容显示</h2><ol>
-<li><pre><code class="hljs">cat &gt; myfile  //创建文件并编辑内容（ctrl+D结束编辑）
-</code></pre>
-<ol start="2">
-<li><pre><code class="hljs">cat -n myfile  //查看文件
-</code></pre>
-<ol start="3">
-<li><pre><code class="hljs">chmod [u/g/o/a][+/-/=][r/w/x] myfile  //更改文件权限
-</code></pre>
-u-user,g-group,o-others,a-all  .   +-添加,–删除,&#x3D;-重置   .<br>r-read读（4），w-write写（2），x-execute执行（1）<ol start="4">
-<li><pre><code class="hljs">more myfile  //分页往后显示文件（Space空格）
-</code></pre>
-<ol start="5">
-<li><pre><code class="hljs">less myfile  //分页自由显示文件（Page Down / Page Up）
-</code></pre>
-<ol start="6">
-<li><pre><code class="hljs">head (-10) myfile  //指定显示文件前若干行（默认前10）
-</code></pre>
-<ol start="7">
-<li><pre><code class="hljs">tail (-10) myfile  //指定显示文件后若干行（默认后10）
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="四、文件内容处理"><a href="#四、文件内容处理" class="headerlink" title="四、文件内容处理"></a>四、文件内容处理</h2><ol>
-<li><pre><code class="hljs">sort myfile  //对文件内容进行排序
-</code></pre>
-<ol start="2">
-<li><pre><code class="hljs">sort -r myfile  //逆序
-</code></pre>
-<ol start="3">
-<li><pre><code class="hljs">uniq myfile  //检查文件中的重复内容
-</code></pre>
-<ol start="4">
-<li><pre><code class="hljs">grep （-c）‘a’ myfile  //在文件中查找指定内容 (显示行号)
-</code></pre>
-<ol start="5">
-<li><pre><code class="hljs">diff myfile01 myfile02  //对不同文件进行比较
-</code></pre>
-<ol start="6">
-<li><pre><code class="hljs">diff3 myfile01 myfile02 myfile03  //三个文件
-</code></pre>
-<ol start="7">
-<li><pre><code class="hljs">sdiff myfile01 myfile02  //合并
-</code></pre>
-<ol start="8">
-<li><pre><code class="hljs">cmp myfile01 myfile02  //通过字节对不同文件进行比较
-</code></pre>
-<ol start="9">
-<li><pre><code class="hljs">comm myfile01 myfile02  //对有序文件进行比较
-</code></pre>
-<ol start="10">
-<li><pre><code class="hljs">cut -b(-c)(-d) 2(3) myfile  //对文件内容进行剪切
-</code></pre>
-<ol start="11">
-<li><pre><code class="hljs">paste myfile02 myfile01 //对文件内容进行粘贴 02-）01
-</code></pre>
-<ol start="12">
-<li><pre><code class="hljs">wc （-参数） myfile  //对文件内容进行统计 （c-字符数,w-单词数,l-行数）
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="五、压缩"><a href="#五、压缩" class="headerlink" title="五、压缩"></a>五、压缩</h2><ol>
-<li><pre><code class="hljs">zip myfile.zip myfile  //压缩
-</code></pre>
-<ol start="2">
-<li><pre><code class="hljs">zip -d myfile.zip myfile  //添加
-</code></pre>
-<ol start="3">
-<li><pre><code class="hljs">zip -m myfile.zip myfile  //删除
-</code></pre>
-<ol start="4">
-<li><pre><code class="hljs">unzip -o myfile.zip  //解压（覆盖）
-</code></pre>
-<ol start="5">
-<li><pre><code class="hljs">unzip -n myfile.zip  //解压（不覆盖）
-</code></pre>
-<ol start="6">
-<li><pre><code class="hljs">zipinfo myfile.zip  //列出压缩文件信息
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>tar -xvf  myfile.tar.gz&#x2F;&#x2F;解压</p>
-</li>
-</ol>
-<h2 id="六、获取帮助"><a href="#六、获取帮助" class="headerlink" title="六、获取帮助"></a>六、获取帮助</h2><ol>
-<li><pre><code class="hljs">man ls  //获取帮助
-</code></pre>
-<ol start="2">
-<li><pre><code class="hljs">man -k ls  //不清楚完整名字
-</code></pre>
-<ol start="3">
-<li><pre><code class="hljs">whatis ls  //获取帮助
-</code></pre>
-<ol start="4">
-<li><pre><code class="hljs">help cd  / cd –help  //获取帮助 -d(简短描述) -s(用法简介)
-</code></pre>
-<ol start="5">
-<li><pre><code class="hljs">info who  //获取帮助
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="七、其他命令"><a href="#七、其他命令" class="headerlink" title="七、其他命令"></a>七、其他命令</h2><ol>
-<li><pre><code class="hljs">clear  //清楚屏幕信息
-</code></pre>
-<ol start="2">
-<li><pre><code class="hljs">echo xx  //显示文本  x=0  echo $x . echo -e \$x . echo $(pwd)
-</code></pre>
-<ol start="3">
-<li><pre><code class="hljs">date  //显示日期和时间（+%y 年  +%m 月  +%d日）
-</code></pre>
-<ol start="4">
-<li><pre><code class="hljs">cal  //显示当前日期  cal -y
-</code></pre>
-<ol start="5">
-<li><pre><code class="hljs">ps  //查看当前进程  -A(所有)  U  lilei (用户lilei)
-</code></pre>
-<ol start="6">
-<li><pre><code class="hljs">kill -9 2315  //终止某一进程  
-</code></pre>
-<ol start="7">
-<li><pre><code class="hljs">ps -ef | grep Jincheng
-</code></pre>
-<ol start="8">
-<li><pre><code class="hljs">pkill Jincheng
-</code></pre>
-<ol start="9">
-<li><pre><code class="hljs">killall Jincheng
-</code></pre>
-<ol start="10">
-<li><pre><code class="hljs">last  //显示最近登录系统的用户信息-6列
-</code></pre>
-<ol start="11">
-<li><pre><code class="hljs">history （10） //显示历史指令-默认1000行
-</code></pre>
-<ol start="12">
-<li><pre><code class="hljs">sudo adduser lilei sudo  //给普通用户赋予root权限
-</code></pre>
-<ol start="13">
-<li><pre><code class="hljs">sudo usermod -G sudo lilei  //同上
-</code></pre>
-<ol start="14">
-<li><pre><code class="hljs">alias l=’ls’  //定义命令别名
-</code></pre>
-<ol start="15">
-<li><pre><code class="hljs">unalias l  //删除别名
-</code></pre>
-<ol start="16">
-<li><pre><code class="hljs">alias  //列出别名
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
+                <h2 id="一、登录与注销"><a href="#一、登录与注销" class="headerlink" title="一、登录与注销"></a>一、登录与注销</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-number">1</span>)	sudo useradd lilei  <span class="hljs-regexp">//</span>添加用户 (不能被立即使用，需设置密码 sudo passwd lilei)  <br><span class="hljs-number">2</span>)	sudo adduser lilei  <span class="hljs-regexp">//</span>添加用户<br><span class="hljs-number">3</span>)	login  <span class="hljs-regexp">//</span>登录或切换用户<br><span class="hljs-number">4</span>)	logout <span class="hljs-regexp">//</span>注销用户（命令行）  <span class="hljs-keyword">exit</span>(shell-退出控制台)<br><span class="hljs-number">5</span>)	shutdown -h <span class="hljs-number">10</span>  <span class="hljs-regexp">//</span><span class="hljs-number">10</span>分钟后自动关机	shutdown -c  <span class="hljs-regexp">//</span>取消<br><span class="hljs-number">6</span>)	halt(root用户)  <span class="hljs-regexp">//</span>关闭所有进程后自动关机<br><span class="hljs-number">7</span>)	poweroff <span class="hljs-regexp">//</span>同上<br><span class="hljs-number">8</span>)	shutdown -r <span class="hljs-number">10</span> <span class="hljs-regexp">//</span>十分钟后自动重启<br><span class="hljs-number">9</span>)	init <span class="hljs-number">6</span>  <span class="hljs-regexp">//</span>重启 （<span class="hljs-number">0</span>-停机，<span class="hljs-number">1</span>-单用户，<span class="hljs-number">2</span>-多用户，<span class="hljs-number">3</span>-完全多用户，<span class="hljs-number">4</span>-图形化，<span class="hljs-number">5</span>-安全模式，<span class="hljs-number">6</span>-重启）<br><span class="hljs-number">10</span>)	reboot  <span class="hljs-regexp">//</span>重启<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="二、目录与文件"><a href="#二、目录与文件" class="headerlink" title="二、目录与文件"></a>二、目录与文件</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-number">1</span>)	pwd   <span class="hljs-regexp">//</span>显示当前工作目录<br><span class="hljs-number">2</span>)	mkdir mydir  <span class="hljs-regexp">//</span>创建工作目录<br><span class="hljs-number">3</span>)	cd mydir  <span class="hljs-regexp">//</span>更改工作目录<br><span class="hljs-number">4</span>)	rmdir mydir <span class="hljs-regexp">//</span>删除工作目录<br><span class="hljs-number">5</span>)	touch myfile  <span class="hljs-regexp">//</span>创建文件<br><span class="hljs-number">6</span>)	mv myfile mydir  <span class="hljs-regexp">//</span>移动目录或文件<br><span class="hljs-number">7</span>)	cp myfile myfir  <span class="hljs-regexp">//</span>复制目录或文件<br><span class="hljs-number">8</span>)	rm -rf mydir  <span class="hljs-regexp">//</span>删除目录或文件<br><span class="hljs-number">9</span>)	ls -l myfile  <span class="hljs-regexp">//</span>查看文件最后被编辑时间<br><span class="hljs-number">10</span>)	ls -lu myfile <span class="hljs-regexp">//</span>查看文件最后被访问时间<br><span class="hljs-number">11</span>)	touch -at <span class="hljs-number">01011212</span> myfile  <span class="hljs-regexp">//</span>修改文件最后被访问时间<br><span class="hljs-number">12</span>)	ls <span class="hljs-regexp">//</span>列出所有文件和目录<br><span class="hljs-number">13</span>)	ls -a <span class="hljs-regexp">//</span>查看所有文件<br><span class="hljs-number">14</span>)	ls -i <span class="hljs-regexp">//</span>显示文件索引节点号<br><span class="hljs-number">15</span>)	ls -l <span class="hljs-regexp">//</span>详细显示<br><span class="hljs-number">16</span>)	ls -m <span class="hljs-regexp">//</span>以逗号分隔<br><span class="hljs-number">17</span>)	sudo apt-get install tree <br><span class="hljs-number">18</span>)	tree -l<span class="hljs-regexp">//</span>以树状图列出目录内容<br><span class="hljs-number">19</span>)	tree -a <span class="hljs-regexp">//</span>所有<br><span class="hljs-number">20</span>)	tree -i <span class="hljs-regexp">//</span>不以阶梯状<br><span class="hljs-number">21</span>)	tree -s  <span class="hljs-regexp">//</span>列出文件或目录大小<br><span class="hljs-number">22</span>)	tree -t  <span class="hljs-regexp">//</span>按更改时间<br><span class="hljs-number">23</span>)	file -b myfile  <span class="hljs-regexp">//</span>显示目录或文件的详细信息<br><span class="hljs-number">24</span>)	stat myfile  <span class="hljs-regexp">//</span>同上<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="三、文件内容显示"><a href="#三、文件内容显示" class="headerlink" title="三、文件内容显示"></a>三、文件内容显示</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver"><span class="hljs-number">1</span>)	cat &gt; myfile <span class="hljs-comment"> //创建文件并编辑内容（ctrl+D结束编辑）</span><br><span class="hljs-number">2</span>)	cat -n myfile <span class="hljs-comment"> //查看文件</span><br><span class="hljs-number">3</span>)	chmod [u/g/o/<span class="hljs-keyword">a</span>][+/-/=][r/w/x] myfile <span class="hljs-comment"> //更改文件权限</span><br>u-user,g-group,o-others,<span class="hljs-keyword">a</span>-all  .   +-添加,<span class="hljs-comment">--删除,=-重置   .</span><br>r-<span class="hljs-built_in">read</span>读（<span class="hljs-number">4</span>），w-<span class="hljs-built_in">write</span>写（<span class="hljs-number">2</span>），x-execute执行（<span class="hljs-number">1</span>）<br><span class="hljs-number">4</span>)	more myfile <span class="hljs-comment"> //分页往后显示文件（Space空格）</span><br><span class="hljs-number">5</span>)	less myfile <span class="hljs-comment"> //分页自由显示文件（Page Down / Page Up）</span><br><span class="hljs-number">6</span>)	head (<span class="hljs-number">-10</span>) myfile <span class="hljs-comment"> //指定显示文件前若干行（默认前10）</span><br><span class="hljs-number">7</span>)	tail (<span class="hljs-number">-10</span>) myfile <span class="hljs-comment"> //指定显示文件后若干行（默认后10）</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="四、文件内容处理"><a href="#四、文件内容处理" class="headerlink" title="四、文件内容处理"></a>四、文件内容处理</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-number">1</span>)	sort myfile  <span class="hljs-regexp">//</span>对文件内容进行排序<br><span class="hljs-number">2</span>)	sort -r myfile  <span class="hljs-regexp">//</span>逆序<br><span class="hljs-number">3</span>)	uniq myfile  <span class="hljs-regexp">//</span>检查文件中的重复内容<br><span class="hljs-number">4</span>)	grep （-c）‘a’ myfile  <span class="hljs-regexp">//</span>在文件中查找指定内容 (显示行号)<br><span class="hljs-number">5</span>)	diff myfile01 myfile02  <span class="hljs-regexp">//</span>对不同文件进行比较<br><span class="hljs-number">6</span>)	diff3 myfile01 myfile02 myfile03  <span class="hljs-regexp">//</span>三个文件<br><span class="hljs-number">7</span>)	sdiff myfile01 myfile02  <span class="hljs-regexp">//</span>合并<br><span class="hljs-number">8</span>)	cmp myfile01 myfile02  <span class="hljs-regexp">//</span>通过字节对不同文件进行比较<br><span class="hljs-number">9</span>)	comm myfile01 myfile02  <span class="hljs-regexp">//</span>对有序文件进行比较<br><span class="hljs-number">10</span>)	cut -b(-c)(-d) <span class="hljs-number">2</span>(<span class="hljs-number">3</span>) myfile  <span class="hljs-regexp">//</span>对文件内容进行剪切<br><span class="hljs-number">11</span>)	paste myfile02 myfile01 <span class="hljs-regexp">//</span>对文件内容进行粘贴 <span class="hljs-number">02</span>-）<span class="hljs-number">01</span><br><span class="hljs-number">12</span>)	wc （-参数） myfile  <span class="hljs-regexp">//</span>对文件内容进行统计 （c-字符数,w-单词数,l-行数）<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="五、压缩"><a href="#五、压缩" class="headerlink" title="五、压缩"></a>五、压缩</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-number">1</span>)	zip myfile.zip myfile  <span class="hljs-regexp">//</span>压缩<br><span class="hljs-number">2</span>)	zip -d myfile.zip myfile  <span class="hljs-regexp">//</span>添加<br><span class="hljs-number">3</span>)	zip -m myfile.zip myfile  <span class="hljs-regexp">//</span>删除<br><span class="hljs-number">4</span>)	unzip -o myfile.zip  <span class="hljs-regexp">//</span>解压（覆盖）<br><span class="hljs-number">5</span>)	unzip -n myfile.zip  <span class="hljs-regexp">//</span>解压（不覆盖）<br><span class="hljs-number">6</span>)	zipinfo myfile.zip  <span class="hljs-regexp">//</span>列出压缩文件信息<br><span class="hljs-number">7</span>)  tar -xvf  myfile.tar.gz<span class="hljs-regexp">//</span>解压<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="六、获取帮助"><a href="#六、获取帮助" class="headerlink" title="六、获取帮助"></a>六、获取帮助</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stata">1)	<span class="hljs-keyword">man</span> <span class="hljs-keyword">ls</span>  <span class="hljs-comment">//获取帮助</span><br>2)	<span class="hljs-keyword">man</span> -k <span class="hljs-keyword">ls</span>  <span class="hljs-comment">//不清楚完整名字</span><br>3)	whatis <span class="hljs-keyword">ls</span>  <span class="hljs-comment">//获取帮助</span><br>4)	<span class="hljs-keyword">help</span> <span class="hljs-keyword">cd</span>  / <span class="hljs-keyword">cd</span> –<span class="hljs-keyword">help</span>  <span class="hljs-comment">//获取帮助 -d(简短描述) -s(用法简介)</span><br>5)	info who  <span class="hljs-comment">//获取帮助</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="七、其他命令"><a href="#七、其他命令" class="headerlink" title="七、其他命令"></a>七、其他命令</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-number">1</span>)	clear  <span class="hljs-regexp">//</span>清楚屏幕信息<br><span class="hljs-number">2</span>)	echo xx  <span class="hljs-regexp">//</span>显示文本  x=<span class="hljs-number">0</span>  echo <span class="hljs-variable">$x</span> . echo -e \<span class="hljs-variable">$x</span> . echo $(pwd)<br><span class="hljs-number">3</span>)	date  <span class="hljs-regexp">//</span>显示日期和时间（+%y 年  +%m 月  +%d日）<br><span class="hljs-number">4</span>)	cal  <span class="hljs-regexp">//</span>显示当前日期  cal -y<br><span class="hljs-number">5</span>)	ps  <span class="hljs-regexp">//</span>查看当前进程  -A(所有)  U  lilei (用户lilei)<br><span class="hljs-number">6</span>)	kill -<span class="hljs-number">9</span> <span class="hljs-number">2315</span>  <span class="hljs-regexp">//</span>终止某一进程  <br><span class="hljs-number">7</span>)	ps -ef | grep Jincheng<br><span class="hljs-number">8</span>)	pkill Jincheng<br><span class="hljs-number">9</span>)	killall Jincheng<br><span class="hljs-number">10</span>)	last  <span class="hljs-regexp">//</span>显示最近登录系统的用户信息-<span class="hljs-number">6</span>列<br><span class="hljs-number">11</span>)	history （<span class="hljs-number">10</span>） <span class="hljs-regexp">//</span>显示历史指令-默认<span class="hljs-number">1000</span>行<br><span class="hljs-number">12</span>)	sudo adduser lilei sudo  <span class="hljs-regexp">//</span>给普通用户赋予root权限<br><span class="hljs-number">13</span>)	sudo usermod -G sudo lilei  <span class="hljs-regexp">//</span>同上<br><span class="hljs-number">14</span>)	alias l=’ls’  <span class="hljs-regexp">//</span>定义命令别名<br><span class="hljs-number">15</span>)	unalias l  <span class="hljs-regexp">//</span>删除别名<br><span class="hljs-number">16</span>)	alias  <span class="hljs-regexp">//</span>列出别名<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -712,7 +336,7 @@ u-user,g-group,o-others,a-all  .   +-添加,–删除,&#x3D;-重置   .<br>r-rea
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/itsqh.github.io/tags/Liunx/">#Liunx</a>
+        <a href="/itsqh.github.io/tags/Liunx-aaa/">#Liunx;aaa</a>
       
     </div>
   
