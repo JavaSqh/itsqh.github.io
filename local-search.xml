@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Docker中容器相关操作</title>
+    <link href="/itsqh.github.io/2022/09/02/Docker%E4%B8%AD%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/"/>
+    <url>/itsqh.github.io/2022/09/02/Docker%E4%B8%AD%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/</url>
+    
+    <content type="html"><![CDATA[<h5 id="查看Docker引擎中运行的容器"><a href="#查看Docker引擎中运行的容器" class="headerlink" title="查看Docker引擎中运行的容器"></a>查看Docker引擎中运行的容器</h5><p><code>Docker ps</code></p><h5 id="镜像下载"><a href="#镜像下载" class="headerlink" title="镜像下载"></a>镜像下载</h5><p><code>docker pull &lt;镜像名称&gt;</code></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Docker</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Centos7的安装</title>
     <link href="/itsqh.github.io/2022/09/02/CentOS7%E7%9A%84%E5%AE%89%E8%A3%85/"/>
     <url>/itsqh.github.io/2022/09/02/CentOS7%E7%9A%84%E5%AE%89%E8%A3%85/</url>
