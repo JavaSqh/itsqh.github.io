@@ -4,19 +4,6 @@
   
   
   <entry>
-    <title>imgTest</title>
-    <link href="/itsqh.github.io/2022/10/15/imgTest/"/>
-    <url>/itsqh.github.io/2022/10/15/imgTest/</url>
-    
-    <content type="html"><![CDATA[<img src="/itsqh.github.io/2022/10/15/imgTest/2.jpg" class="" title="This is an example image"><img src="/itsqh.github.io/2022/10/15/imgTest/2.jpg" class="" title="2jmage"><p><img src="/itsqh.github.io/logo.jpg" alt="logo"></p><p><img src="/itsqh.github.io/1.png" alt="1.png 看不到"></p><p><img src="/itsqh.github.io/./imgTest/1.png" alt="imgTest\1.png  可以看到"></p><p><img src="S:\work_NodeJs\hexo-blog\source_posts\imgTest\1.png" alt="S:\work\_NodeJs\hexo-blog\source\_posts\imgTest\1.png 可以看到"></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>VMware安装CentOS7</title>
     <link href="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/"/>
     <url>/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/</url>
