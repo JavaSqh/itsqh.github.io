@@ -16,48 +16,21 @@
   <meta name="author" content="itsqh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="镜像网站：https:&#x2F;&#x2F;mirror.iscas.ac.cn&#x2F;centos&#x2F;7&#x2F;isos&#x2F;x86_64&#x2F; 我使用的是: CentOS-7-x86_64-DVD-1908.iso  选择文件-新建虚拟机  选择自定义虚拟机，下一步  下一步  选择镜像  自定义镜像名称以及位置  选择处理器数量以及内核数量  设置虚拟机的内存大小  选择网络类型，后续配置NAT模式的网络  默认下一步    配置">
+    <meta name="description" content="取消git add命令方法一：使用git reset命令取消暂存 1git reset &lt;file&gt;  其中，是要取消暂存的文件名 1git reset .  取消所有文件的暂存，需要注意的是，这种方法只是取消了add操作，文件的修改并没有被删除，如果需要完全撤销修改，还需要使用git checkout命令。 方法二：使用git rm命令取消暂存 这个命令用来删除文件，并将删除操作添加">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VMware安装CentOS7">
-<meta property="og:url" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/index.html">
+<meta property="og:title" content="git基本操作指令">
+<meta property="og:url" content="https://javasqh.github.io/itsqh.github.io/2024/02/28/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/index.html">
 <meta property="og:site_name" content="itsqh">
-<meta property="og:description" content="镜像网站：https:&#x2F;&#x2F;mirror.iscas.ac.cn&#x2F;centos&#x2F;7&#x2F;isos&#x2F;x86_64&#x2F; 我使用的是: CentOS-7-x86_64-DVD-1908.iso  选择文件-新建虚拟机  选择自定义虚拟机，下一步  下一步  选择镜像  自定义镜像名称以及位置  选择处理器数量以及内核数量  设置虚拟机的内存大小  选择网络类型，后续配置NAT模式的网络  默认下一步    配置">
+<meta property="og:description" content="取消git add命令方法一：使用git reset命令取消暂存 1git reset &lt;file&gt;  其中，是要取消暂存的文件名 1git reset .  取消所有文件的暂存，需要注意的是，这种方法只是取消了add操作，文件的修改并没有被删除，如果需要完全撤销修改，还需要使用git checkout命令。 方法二：使用git rm命令取消暂存 这个命令用来删除文件，并将删除操作添加">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/1.%E6%96%B0%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/2.%E8%87%AA%E5%AE%9A%E4%B9%89%E8%99%9A%E6%8B%9F%E6%9C%BA.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/3.%E4%B8%8B%E4%B8%80%E6%AD%A5.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/4.%E9%80%89%E6%8B%A9%E9%95%9C%E5%83%8F.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/5.%E5%82%A8%E5%AD%98%E4%BD%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E5%90%8D%E7%A7%B0.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/6.%E9%80%89%E6%8B%A9%E5%90%88%E9%80%82%E8%87%AA%E5%B7%B1%E7%9A%84%E5%A4%84%E7%90%86%E5%99%A8%E6%95%B0%E9%87%8F.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/7.%E9%80%89%E6%8B%A9%E5%86%85%E5%AD%98.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/8.%E9%80%89%E6%8B%A9NAT%E6%A8%A1%E5%BC%8F.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/9.%E4%B8%8B%E4%B8%80%E6%AD%A5.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/10.%E4%B8%8B%E4%B8%80%E6%AD%A5.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/11.%E4%B8%8B%E4%B8%80%E6%AD%A5.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/12.%E9%80%89%E6%8B%A9%E7%A3%81%E7%9B%98%E5%A4%A7%E5%B0%8F.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/13.%E4%B8%8B%E4%B8%80%E6%AD%A5.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/14.%E5%AE%8C%E6%88%90.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/15%E5%90%AF%E5%8A%A8.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/16.%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%80.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/17.%E7%AD%89%E7%9D%80.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/18%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/19.%E5%AE%89%E8%A3%85.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/20.%E7%BB%A7%E7%BB%AD.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/22.%E8%AE%BE%E7%BD%AEroot%E5%AF%86%E7%A0%81.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/23.%E7%AD%89%E5%BE%85%E5%AE%89%E8%A3%85%E5%8D%B3%E5%8F%AF.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/24.%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%E9%87%8D%E5%90%AF.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/25.%E9%80%89%E6%8B%A9%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%B3%E5%8F%AF.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/27.%E8%BE%93%E5%85%A5%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81.png">
-<meta property="og:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/28.%E5%AE%8C%E6%88%90.png">
-<meta property="article:published_time" content="2022-10-15T10:26:02.000Z">
-<meta property="article:modified_time" content="2023-04-09T12:54:19.057Z">
+<meta property="article:published_time" content="2024-02-28T06:34:07.000Z">
+<meta property="article:modified_time" content="2024-02-28T06:34:07.918Z">
 <meta property="article:author" content="itsqh">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/1.%E6%96%B0%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA.png">
   
   
   
-  <title>VMware安装CentOS7 - itsqh</title>
+  <title>git基本操作指令 - itsqh</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -239,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="VMware安装CentOS7"></span>
+            <span id="subtitle" data-typed-text="git基本操作指令"></span>
           
         </div>
 
@@ -250,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-15 18:26" pubdate>
-          2022年10月15日 晚上
+        <time datetime="2024-02-28 14:34" pubdate>
+          2024年2月28日 下午
         </time>
       </span>
     
@@ -262,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          383 字
+          1.1k 字
         
       </span>
     
@@ -273,7 +246,7 @@
         
         
         
-          4 分钟
+          9 分钟
         
       </span>
     
@@ -319,74 +292,43 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">VMware安装CentOS7</h1>
+            <h1 style="display: none">git基本操作指令</h1>
             
             
               <div class="markdown-body">
                 
-                <p>镜像网站：<a target="_blank" rel="noopener" href="https://mirror.iscas.ac.cn/centos/7/isos/x86_64/">https://mirror.iscas.ac.cn/centos/7/isos/x86_64/</a></p>
-<p>我使用的是: CentOS-7-x86_64-DVD-1908.iso</p>
-<ol>
-<li><h5 id="选择文件-新建虚拟机"><a href="#选择文件-新建虚拟机" class="headerlink" title="选择文件-新建虚拟机"></a>选择文件-新建虚拟机</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/1.%E6%96%B0%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA.png" srcset="/itsqh.github.io/img/loading.gif" lazyload alt="新建虚拟机"></p>
-</li>
-<li><h5 id="选择自定义虚拟机，下一步"><a href="#选择自定义虚拟机，下一步" class="headerlink" title="选择自定义虚拟机，下一步"></a>选择自定义虚拟机，下一步</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/2.%E8%87%AA%E5%AE%9A%E4%B9%89%E8%99%9A%E6%8B%9F%E6%9C%BA.png" srcset="/itsqh.github.io/img/loading.gif" lazyload alt="自定义虚拟机"></p>
-</li>
-<li><h5 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/3.%E4%B8%8B%E4%B8%80%E6%AD%A5.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="选择镜像"><a href="#选择镜像" class="headerlink" title="选择镜像"></a>选择镜像</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/4.%E9%80%89%E6%8B%A9%E9%95%9C%E5%83%8F.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="自定义镜像名称以及位置"><a href="#自定义镜像名称以及位置" class="headerlink" title="自定义镜像名称以及位置"></a>自定义镜像名称以及位置</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/5.%E5%82%A8%E5%AD%98%E4%BD%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E5%90%8D%E7%A7%B0.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="选择处理器数量以及内核数量"><a href="#选择处理器数量以及内核数量" class="headerlink" title="选择处理器数量以及内核数量"></a>选择处理器数量以及内核数量</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/6.%E9%80%89%E6%8B%A9%E5%90%88%E9%80%82%E8%87%AA%E5%B7%B1%E7%9A%84%E5%A4%84%E7%90%86%E5%99%A8%E6%95%B0%E9%87%8F.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="设置虚拟机的内存大小"><a href="#设置虚拟机的内存大小" class="headerlink" title="设置虚拟机的内存大小"></a>设置虚拟机的内存大小</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/7.%E9%80%89%E6%8B%A9%E5%86%85%E5%AD%98.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="选择网络类型，后续配置NAT模式的网络"><a href="#选择网络类型，后续配置NAT模式的网络" class="headerlink" title="选择网络类型，后续配置NAT模式的网络"></a>选择网络类型，后续配置NAT模式的网络</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/8.%E9%80%89%E6%8B%A9NAT%E6%A8%A1%E5%BC%8F.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="默认下一步"><a href="#默认下一步" class="headerlink" title="默认下一步"></a>默认下一步</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/9.%E4%B8%8B%E4%B8%80%E6%AD%A5.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-<p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/10.%E4%B8%8B%E4%B8%80%E6%AD%A5.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-<p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/11.%E4%B8%8B%E4%B8%80%E6%AD%A5.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="配置自己的磁盘大小"><a href="#配置自己的磁盘大小" class="headerlink" title="配置自己的磁盘大小"></a>配置自己的磁盘大小</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/12.%E9%80%89%E6%8B%A9%E7%A3%81%E7%9B%98%E5%A4%A7%E5%B0%8F.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="指定磁盘文件位置以及名称，下一步之后点击完成即可"><a href="#指定磁盘文件位置以及名称，下一步之后点击完成即可" class="headerlink" title="指定磁盘文件位置以及名称，下一步之后点击完成即可"></a>指定磁盘文件位置以及名称，下一步之后点击完成即可</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/13.%E4%B8%8B%E4%B8%80%E6%AD%A5.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-<p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/14.%E5%AE%8C%E6%88%90.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="之后系统会自动启动，选择Install-CentOS-7"><a href="#之后系统会自动启动，选择Install-CentOS-7" class="headerlink" title="之后系统会自动启动，选择Install CentOS 7"></a>之后系统会自动启动，选择Install CentOS 7</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/15%E5%90%AF%E5%8A%A8.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="下拉找到中文，选择简体中文"><a href="#下拉找到中文，选择简体中文" class="headerlink" title="下拉找到中文，选择简体中文"></a>下拉找到中文，选择简体中文</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/16.%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%80.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="安装黄色的提示信息，操作即可"><a href="#安装黄色的提示信息，操作即可" class="headerlink" title="安装黄色的提示信息，操作即可"></a>安装黄色的提示信息，操作即可</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/17.%E7%AD%89%E7%9D%80.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-<p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/18%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-<ul>
-<li>安装位置，选择的默认的即可</li>
-</ul>
-<p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/19.%E5%AE%89%E8%A3%85.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-<ul>
-<li><strong>完成</strong>之后，点击<strong>开始安装</strong>即可</li>
-</ul>
-</li>
-<li><h5 id="进行Root用户密码设置"><a href="#进行Root用户密码设置" class="headerlink" title="进行Root用户密码设置"></a>进行Root用户密码设置</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/20.%E7%BB%A7%E7%BB%AD.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-<ul>
-<li>设置Root密码界面</li>
-</ul>
-<p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/22.%E8%AE%BE%E7%BD%AEroot%E5%AF%86%E7%A0%81.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-<ul>
-<li><p>设置完成密码之后，等待安装即可</p>
-<p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/23.%E7%AD%89%E5%BE%85%E5%AE%89%E8%A3%85%E5%8D%B3%E5%8F%AF.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><p>等待安装完成，点击重启即可</p>
-<p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/24.%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%E9%87%8D%E5%90%AF.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-</ul>
-</li>
-<li><h5 id="等待系统重启之后，选择第一条回车"><a href="#等待系统重启之后，选择第一条回车" class="headerlink" title="等待系统重启之后，选择第一条回车"></a>等待系统重启之后，选择第一条回车</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/25.%E9%80%89%E6%8B%A9%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%B3%E5%8F%AF.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="输入账号密码，密码输入的时候不显示，回车即可"><a href="#输入账号密码，密码输入的时候不显示，回车即可" class="headerlink" title="输入账号密码，密码输入的时候不显示，回车即可"></a>输入账号密码，密码输入的时候不显示，回车即可</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/27.%E8%BE%93%E5%85%A5%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-<li><h5 id="完成登录，进入系统"><a href="#完成登录，进入系统" class="headerlink" title="完成登录，进入系统"></a>完成登录，进入系统</h5><p><img src="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/28.%E5%AE%8C%E6%88%90.png" srcset="/itsqh.github.io/img/loading.gif" lazyload></p>
-</li>
-</ol>
+                <h3 id="取消git-add命令"><a href="#取消git-add命令" class="headerlink" title="取消git add命令"></a>取消git add命令</h3><p>方法一：使用git reset命令取消暂存</p>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sas">git <span class="hljs-keyword">reset</span> &lt;<span class="hljs-keyword">file</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<p>其中，<file>是要取消暂存的文件名</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs erlang">git reset .<br></code></pre></td></tr></table></figure>
+
+<p>取消所有文件的暂存，需要注意的是，这种方法只是取消了add操作，文件的修改并没有被删除，如果需要完全撤销修改，还需要使用git checkout命令。</p>
+<p>方法二：使用git rm命令取消暂存</p>
+<p>这个命令用来删除文件，并将删除操作添加到暂存区。如果我们使用这个命令来删除一个被误添加到暂存区的文件，那么就可以同时取消添加和删除操作。使用如下命令：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">git <span class="hljs-keyword">rm</span> --cached &lt;<span class="hljs-keyword">file</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<p>其中，–cached表示只从暂存区删除文件，而不删除工作区中的文件。需要取消暂存的文件名可以换成通配符，例如取消所有文件的暂存，可以使用如下命令：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">git rm <span class="hljs-comment">--cached .</span><br></code></pre></td></tr></table></figure>
+
+<p>方法三：使用git restore命令取消暂存</p>
+<p>在Git 2.23版本中引入了新的命令git restore，该命令用来恢复工作区中的文件，也可以用来取消文件的暂存。使用如下命令：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">git <span class="hljs-keyword">restore</span> --staged &lt;<span class="hljs-keyword">file</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<p>其中，–staged表示将文件从暂存区中恢复到工作区中。需要取消暂存的文件可以换成通配符，例如取消所有文件的暂存，可以使用如下命令：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">git restore <span class="hljs-comment">--staged .</span><br></code></pre></td></tr></table></figure>
+
+<p>需要注意的是，如果文件在暂存区中和工作区中的内容不同，那么取消暂存操作并不会恢复文件的内容，需要使用git checkout命令或其他方法将文件内容还原到之前的状态。</p>
+<h3 id="取消git-commit命令"><a href="#取消git-commit命令" class="headerlink" title="取消git commit命令"></a>取消git commit命令</h3><h4 id="git-reset-–soft-HEAD"><a href="#git-reset-–soft-HEAD" class="headerlink" title="git reset –soft HEAD^"></a><strong>git reset –soft HEAD^</strong></h4><p>这样就成功的撤销了你的commit，注意，仅仅是撤回commit操作，您写的代码仍然保留，HEAD^的意思是上一个版本</p>
+<h4 id="参数："><a href="#参数：" class="headerlink" title="参数："></a>参数：</h4><h5 id="–mixed"><a href="#–mixed" class="headerlink" title="–mixed"></a>–mixed</h5><p>意思是：不删除工作空间改动代码，撤销commit，并且撤销git add . 操作</p>
+<p>这个为默认参数,git reset –mixed HEAD^ 和 git reset HEAD^ 效果是一样的。</p>
+<h5 id="–soft"><a href="#–soft" class="headerlink" title="–soft"></a>–soft</h5><p>不删除工作空间改动代码，撤销commit，不撤销git add .</p>
+<h5 id="–hard"><a href="#–hard" class="headerlink" title="–hard"></a>–hard</h5><p>删除工作空间改动代码，撤销commit，撤销git add .</p>
+<p>注意完成这个操作后，就恢复到了上一次的commit状态。</p>
+<p>顺便说一下，如果commit注释写错了，只是想改一下注释，只需要：</p>
+<p>git commit –amend</p>
+<p>此时会进入默认vim编辑器，修改注释完毕后保存就好了。</p>
+<h3 id="取消被追踪并且推送到远程分支"><a href="#取消被追踪并且推送到远程分支" class="headerlink" title="取消被追踪并且推送到远程分支"></a>取消被追踪并且推送到远程分支</h3><p>git rm  -r –cached .idea  &#x2F;&#x2F; 删除远程，本地不进行删除</p>
 
                 
               </div>
@@ -404,8 +346,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>VMware安装CentOS7</div>
-      <div>https://javasqh.github.io/itsqh.github.io/2022/10/15/VMware安装CentOS7/</div>
+      <div>git基本操作指令</div>
+      <div>https://javasqh.github.io/itsqh.github.io/2024/02/28/git基本操作指令/</div>
     </div>
     <div class="license-meta">
       
@@ -417,7 +359,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月15日</div>
+          <div>2024年2月28日</div>
         </div>
       
       
@@ -447,18 +389,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/itsqh.github.io/2024/02/28/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/" title="git基本操作指令">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">git基本操作指令</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/itsqh.github.io/2022/09/02/Docker%E4%B8%AD%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" title="Docker中容器相关操作">
-                        <span class="hidden-mobile">Docker中容器相关操作</span>
+                      <a href="/itsqh.github.io/2022/10/15/VMware%E5%AE%89%E8%A3%85CentOS7/" title="VMware安装CentOS7">
+                        <span class="hidden-mobile">VMware安装CentOS7</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
