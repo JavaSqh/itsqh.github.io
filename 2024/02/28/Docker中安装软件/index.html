@@ -24,7 +24,7 @@
 <meta property="og:description" content="在Ubuntu上安装Docker有以下几个步骤： 更新apt包管理器：  sudo apt-get update  安装Docker依赖包：  sudo apt-get install apt-transport-https ca-certificates curl software-properties-common  添加Docker的官方GPG密钥：  curl -fsSL https:&#x2F;&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-28T06:43:06.000Z">
-<meta property="article:modified_time" content="2024-04-16T02:26:44.958Z">
+<meta property="article:modified_time" content="2024-04-16T02:32:07.001Z">
 <meta property="article:author" content="xiao">
 <meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary_large_image">
@@ -342,9 +342,19 @@
 <h4 id="案例八：进入docker虚拟机shell，-it交互方法"><a href="#案例八：进入docker虚拟机shell，-it交互方法" class="headerlink" title="案例八：进入docker虚拟机shell，-it交互方法"></a>案例八：进入docker虚拟机shell，-it交互方法</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">docker exec -it nginx  <span class="hljs-regexp">/bin/</span>bash<br></code></pre></td></tr></table></figure>
 
 
+<h2 id="安装Minio"><a href="#安装Minio" class="headerlink" title="安装Minio"></a>安装Minio</h2><p>拉取镜像<br>docker pull minio&#x2F;minio</p>
+<ul>
+<li>创建data和config文件夹<br><code>mkdir -p /minio/data mkdir -p /minio/config</code></li>
+<li>运行镜像<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">docker <span class="hljs-keyword">run</span><span class="language-bash"> -p 49000:49000 -p 49090:49090 --name minio \</span><br><span class="language-bash">-d --restart=always \</span><br><span class="language-bash">-e <span class="hljs-string">&quot;MINIO_ROOT_USER=admin&quot;</span> \</span><br><span class="language-bash">-e <span class="hljs-string">&quot;MINIO_ROOT_PASSWORD=adminminio&quot;</span> \</span><br><span class="language-bash">-v /home/crazysnow/Desktop/BasicServices/minio/data:/data \</span><br><span class="language-bash">-v /home/crazysnow/Desktop/BasicServices/minio/config:/root/.minio \</span><br><span class="language-bash">minio/minio server /data \</span><br><span class="language-bash">--console-address <span class="hljs-string">&quot;:49000&quot;</span> --address <span class="hljs-string">&quot;:49090&quot;</span></span><br></code></pre></td></tr></table></figure>
+上面的例子是这样工作的：<br>docker run启动 MinIO 容器。</li>
+</ul>
+<p>-p将本地端口绑定到容器端口。</p>
+<p>-user将容器的用户名设置为当前用户和用户组的策略。</p>
+<p>-name为容器创建一个名称。</p>
+<p>-v将文件路径设置为容器要使用的持久卷位置。当 MinIO 将数据写入 时&#x2F;data，该数据实际上会写入本地路径~&#x2F;minio&#x2F;data，该数据可以在容器重新启动之间保留。您可以替换${HOME}&#x2F;minio&#x2F;data为用户主目录中用户具有读、写和删除访问权限的另一个位置。</p>
+<p>-e分别设置环境变量MINIO_ROOT_USER和MINIO_ROOT_PASSWORD。这些设置root 用户凭据。更改用于您的容器的示例值。</p>
 <h2 id="安装Kafka"><a href="#安装Kafka" class="headerlink" title="安装Kafka"></a>安装Kafka</h2><p>首先创建一个网络<br>app-tier：网络名称<br>–driver：网络类型为bridge</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">sudo docker network <span class="hljs-built_in">create</span> app-tier <span class="hljs-comment">--driver bridge</span><br></code></pre></td></tr></table></figure>
-
 <h4 id="1、安装zookeeper"><a href="#1、安装zookeeper" class="headerlink" title="1、安装zookeeper"></a>1、安装zookeeper</h4><p><strong>Kafka</strong>依赖zookeeper所以先安装zookeeper<br><strong>-p</strong>：设置映射端口（默认2181）<br><strong>-d</strong>：后台启动</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo docker <span class="hljs-built_in">run</span> -d --name zookeeper-server --network app-tier  --restart always   -e <span class="hljs-attribute">ALLOW_ANONYMOUS_LOGIN</span>=<span class="hljs-literal">yes</span> bitnami/zookeeper:latest<br></code></pre></td></tr></table></figure>
 
@@ -359,24 +369,10 @@
 <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta">sudo docker rm zookeeper-<span class="hljs-keyword">server</span><br></code></pre></td></tr></table></figure>
 
 
-<h4 id="2、安装Minio"><a href="#2、安装Minio" class="headerlink" title="2、安装Minio"></a>2、安装Minio</h4><p>拉取镜像<br>docker pull minio&#x2F;minio</p>
-<ul>
-<li>创建data和config文件夹<br><code>mkdir -p /minio/data mkdir -p /minio/config</code></li>
-<li>运行镜像<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">docker <span class="hljs-keyword">run</span><span class="language-bash"> -p 49000:49000 -p 49090:49090 --name minio \</span><br><span class="language-bash">-d --restart=always \</span><br><span class="language-bash">-e <span class="hljs-string">&quot;MINIO_ROOT_USER=admin&quot;</span> \</span><br><span class="language-bash">-e <span class="hljs-string">&quot;MINIO_ROOT_PASSWORD=adminminio&quot;</span> \</span><br><span class="language-bash">-v /home/crazysnow/Desktop/BasicServices/minio/data:/data \</span><br><span class="language-bash">-v /home/crazysnow/Desktop/BasicServices/minio/config:/root/.minio \</span><br><span class="language-bash">minio/minio server /data \</span><br><span class="language-bash">--console-address <span class="hljs-string">&quot;:49000&quot;</span> --address <span class="hljs-string">&quot;:49090&quot;</span></span><br></code></pre></td></tr></table></figure>
-上面的例子是这样工作的：<br>docker run启动 MinIO 容器。</li>
-</ul>
-<p>-p将本地端口绑定到容器端口。</p>
-<p>-user将容器的用户名设置为当前用户和用户组的策略。</p>
-<p>-name为容器创建一个名称。</p>
-<p>-v将文件路径设置为容器要使用的持久卷位置。当 MinIO 将数据写入 时&#x2F;data，该数据实际上会写入本地路径~&#x2F;minio&#x2F;data，该数据可以在容器重新启动之间保留。您可以替换${HOME}&#x2F;minio&#x2F;data为用户主目录中用户具有读、写和删除访问权限的另一个位置。</p>
-<p>-e分别设置环境变量MINIO_ROOT_USER和MINIO_ROOT_PASSWORD。这些设置root 用户凭据。更改用于您的容器的示例值。</p>
 <h4 id="2、安装Kafka"><a href="#2、安装Kafka" class="headerlink" title="2、安装Kafka"></a>2、安装Kafka</h4><p>安装并运行Kafka，<br>–name：容器名称<br>-p：设置映射端口（默认9092 ）<br>-d：后台启动<br>ALLOW_PLAINTEXT_LISTENER任何人可以访问<br>KAFKA_CFG_ZOOKEEPER_CONNECT链接的zookeeper<br>KAFKA_ADVERTISED_HOST_NAME当前主机IP或地址（重点：如果是服务器部署则配服务器IP或域名否则客户端监听消息会报地址错误）<br>-e KAFKA_CFG_ADVERTISED_LISTENERS&#x3D;PLAINTEXT:&#x2F;&#x2F;192.168.0.101:9092 \</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sudo docker run -d --name kafka-server  --network app-tier   -p <span class="hljs-number">9092</span>:<span class="hljs-number">9092</span> --restart always -v <span class="hljs-regexp">/home/</span>crazysnow<span class="hljs-regexp">/Desktop/</span>javaServer<span class="hljs-regexp">/docker/</span>config<span class="hljs-regexp">/kafka_server.properties:/</span>opt<span class="hljs-regexp">/kafka/</span>config<span class="hljs-regexp">/server.properties -e ALLOW_PLAINTEXT_LISTENER=yes   -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181  -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT:/</span><span class="hljs-regexp">/192.168.1.100:9092 bitnami/</span>kafka:latest<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">docker run -v <span class="hljs-regexp">/path/</span>to<span class="hljs-regexp">/kafka_server.properties:/</span>opt<span class="hljs-regexp">/kafka/</span>config/server.properties \<br>  --name my-kafka -d kafka<br></code></pre></td></tr></table></figure>
-
-
-
 
 
 <p>查看kafka容器日志（可省略）</p>
