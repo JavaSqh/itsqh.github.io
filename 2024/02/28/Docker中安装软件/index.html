@@ -24,7 +24,7 @@
 <meta property="og:description" content="在Ubuntu上安装Docker有以下几个步骤： 更新apt包管理器：  sudo apt-get update  安装Docker依赖包：  sudo apt-get install apt-transport-https ca-certificates curl software-properties-common  添加Docker的官方GPG密钥：  curl -fsSL https:&#x2F;&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-28T06:43:06.000Z">
-<meta property="article:modified_time" content="2024-02-28T06:48:40.635Z">
+<meta property="article:modified_time" content="2024-04-16T02:26:44.958Z">
 <meta property="article:author" content="xiao">
 <meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary_large_image">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          8.5k 字
+          10k 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          71 分钟
+          84 分钟
         
       </span>
     
@@ -329,6 +329,19 @@
 <p>sudo systemctl enable docker</p>
 <p>通过运行以下命令来检查Docker是否成功安装并运行：</p>
 <p>sudo docker run hello-world</p>
+<h2 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h2><h4 id="案例一：启动nginx，绑定80到连接本地的8080端口"><a href="#案例一：启动nginx，绑定80到连接本地的8080端口" class="headerlink" title="案例一：启动nginx，绑定80到连接本地的8080端口"></a>案例一：启动nginx，绑定80到连接本地的8080端口</h4><p>docker run -p 8080:80 -d nginx<br>-d:后台运行，</p>
+<h4 id="案例二：-启动ubuntu"><a href="#案例二：-启动ubuntu" class="headerlink" title="案例二： 启动ubuntu"></a>案例二： 启动ubuntu</h4><p>docker run ubuntu echo hello world<br>自动下载ubuntu ，并启动</p>
+<h4 id="案例三：替换docker-中文件"><a href="#案例三：替换docker-中文件" class="headerlink" title="案例三：替换docker 中文件"></a>案例三：替换docker 中文件</h4><p>docker cp index.html containerId:&#x2F;&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html</p>
+<h4 id="案例四：保存docker"><a href="#案例四：保存docker" class="headerlink" title="案例四：保存docker"></a>案例四：保存docker</h4><p>docker commit -m “message” containerId<br>保存为一个新的image</p>
+<h4 id="案例五：dockerfile-文件创建docker-image"><a href="#案例五：dockerfile-文件创建docker-image" class="headerlink" title="案例五：dockerfile 文件创建docker image"></a>案例五：dockerfile 文件创建docker image</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">FROM</span> ubuntu   <br>MAINTAINER wsn<br><span class="hljs-built_in">RUN</span> apt-<span class="hljs-built_in">get</span> update<br><span class="hljs-built_in">RUN</span> apt-<span class="hljs-built_in">get</span> install -y nginx<br>copy index.html /var/www/html<br>ENTRYPOINT [<span class="hljs-string">&quot;/usr/sbin/nginx&quot;</span>,<span class="hljs-string">&quot;-g&quot;</span>,<span class="hljs-string">&quot;daemon off;&quot;</span>]<br>EXPOSE 80<br></code></pre></td></tr></table></figure>
+
+<p>当前目录下运行命令 docker build -t wsn&#x2F;ubuntu-nginx .<br>wsn&#x2F;ubuntu-nginx 作为容器的名字</p>
+<h4 id="案例六：docker分层"><a href="#案例六：docker分层" class="headerlink" title="案例六：docker分层"></a>案例六：docker分层</h4><h4 id="案例七：volumn-持久化"><a href="#案例七：volumn-持久化" class="headerlink" title="案例七：volumn 持久化"></a>案例七：volumn 持久化</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">docker run -p <span class="hljs-number">80</span>:<span class="hljs-number">80</span> -d -v <span class="hljs-variable">$PWD</span><span class="hljs-regexp">/html:/u</span>sr<span class="hljs-regexp">/share/</span>nginx/html nginx<br></code></pre></td></tr></table></figure>
+
+<p>$PWD&#x2F;html 挂载虚拟机的&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html目录下</p>
+<h4 id="案例八：进入docker虚拟机shell，-it交互方法"><a href="#案例八：进入docker虚拟机shell，-it交互方法" class="headerlink" title="案例八：进入docker虚拟机shell，-it交互方法"></a>案例八：进入docker虚拟机shell，-it交互方法</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">docker exec -it nginx  <span class="hljs-regexp">/bin/</span>bash<br></code></pre></td></tr></table></figure>
+
+
 <h2 id="安装Kafka"><a href="#安装Kafka" class="headerlink" title="安装Kafka"></a>安装Kafka</h2><p>首先创建一个网络<br>app-tier：网络名称<br>–driver：网络类型为bridge</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">sudo docker network <span class="hljs-built_in">create</span> app-tier <span class="hljs-comment">--driver bridge</span><br></code></pre></td></tr></table></figure>
 
@@ -346,9 +359,17 @@
 <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta">sudo docker rm zookeeper-<span class="hljs-keyword">server</span><br></code></pre></td></tr></table></figure>
 
 
-
-
-
+<h4 id="2、安装Minio"><a href="#2、安装Minio" class="headerlink" title="2、安装Minio"></a>2、安装Minio</h4><p>拉取镜像<br>docker pull minio&#x2F;minio</p>
+<ul>
+<li>创建data和config文件夹<br><code>mkdir -p /minio/data mkdir -p /minio/config</code></li>
+<li>运行镜像<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">docker <span class="hljs-keyword">run</span><span class="language-bash"> -p 49000:49000 -p 49090:49090 --name minio \</span><br><span class="language-bash">-d --restart=always \</span><br><span class="language-bash">-e <span class="hljs-string">&quot;MINIO_ROOT_USER=admin&quot;</span> \</span><br><span class="language-bash">-e <span class="hljs-string">&quot;MINIO_ROOT_PASSWORD=adminminio&quot;</span> \</span><br><span class="language-bash">-v /home/crazysnow/Desktop/BasicServices/minio/data:/data \</span><br><span class="language-bash">-v /home/crazysnow/Desktop/BasicServices/minio/config:/root/.minio \</span><br><span class="language-bash">minio/minio server /data \</span><br><span class="language-bash">--console-address <span class="hljs-string">&quot;:49000&quot;</span> --address <span class="hljs-string">&quot;:49090&quot;</span></span><br></code></pre></td></tr></table></figure>
+上面的例子是这样工作的：<br>docker run启动 MinIO 容器。</li>
+</ul>
+<p>-p将本地端口绑定到容器端口。</p>
+<p>-user将容器的用户名设置为当前用户和用户组的策略。</p>
+<p>-name为容器创建一个名称。</p>
+<p>-v将文件路径设置为容器要使用的持久卷位置。当 MinIO 将数据写入 时&#x2F;data，该数据实际上会写入本地路径~&#x2F;minio&#x2F;data，该数据可以在容器重新启动之间保留。您可以替换${HOME}&#x2F;minio&#x2F;data为用户主目录中用户具有读、写和删除访问权限的另一个位置。</p>
+<p>-e分别设置环境变量MINIO_ROOT_USER和MINIO_ROOT_PASSWORD。这些设置root 用户凭据。更改用于您的容器的示例值。</p>
 <h4 id="2、安装Kafka"><a href="#2、安装Kafka" class="headerlink" title="2、安装Kafka"></a>2、安装Kafka</h4><p>安装并运行Kafka，<br>–name：容器名称<br>-p：设置映射端口（默认9092 ）<br>-d：后台启动<br>ALLOW_PLAINTEXT_LISTENER任何人可以访问<br>KAFKA_CFG_ZOOKEEPER_CONNECT链接的zookeeper<br>KAFKA_ADVERTISED_HOST_NAME当前主机IP或地址（重点：如果是服务器部署则配服务器IP或域名否则客户端监听消息会报地址错误）<br>-e KAFKA_CFG_ADVERTISED_LISTENERS&#x3D;PLAINTEXT:&#x2F;&#x2F;192.168.0.101:9092 \</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sudo docker run -d --name kafka-server  --network app-tier   -p <span class="hljs-number">9092</span>:<span class="hljs-number">9092</span> --restart always -v <span class="hljs-regexp">/home/</span>crazysnow<span class="hljs-regexp">/Desktop/</span>javaServer<span class="hljs-regexp">/docker/</span>config<span class="hljs-regexp">/kafka_server.properties:/</span>opt<span class="hljs-regexp">/kafka/</span>config<span class="hljs-regexp">/server.properties -e ALLOW_PLAINTEXT_LISTENER=yes   -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181  -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT:/</span><span class="hljs-regexp">/192.168.1.100:9092 bitnami/</span>kafka:latest<br></code></pre></td></tr></table></figure>
 
